@@ -1,0 +1,33 @@
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+.direnv/
+
+# pre-commit
+.pre-commit-config.yaml
+
+# Generated images and ISOs
+*.iso
+*.img
+*.img.zst
+dist/
+
+# Secrets and sensitive data
+secrets/
+*.secret
+*.key
+*.env
+
+# Nix build results
+result
+result-*
+
+# Editor and temporary files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
