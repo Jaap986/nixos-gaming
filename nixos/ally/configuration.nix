@@ -65,6 +65,19 @@
   # Nixpkgs Configuration
   # ============================================================================
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.overlays = [
+    (final: prev: {
+      handheld-daemon = prev.handheld-daemon.overrideAttrs (oldAttrs: {
+        version = "4.1.12";
+        src = prev.fetchFromGitHub {
+          owner = "hhd-dev";
+          repo = "hhd";
+          tag = "v4.1.12";
+          hash = "sha256-Cv6kDrPm8AIB+JleZ8e17NF3EX+lOFk4Ndc1eJO3J8Y=";
+        };
+      });
+    })
+  ];
 
   # ============================================================================
   # Nix Configuration
