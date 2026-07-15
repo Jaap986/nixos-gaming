@@ -94,7 +94,7 @@ sleep 2
 echo "Mounting filesystems..."
 mount "${root_part}" /mnt
 mkdir -p /mnt/boot
-mount "${boot_part}" /mnt/boot
+mount -o fmask=0077,dmask=0077 "${boot_part}" /mnt/boot
 
 echo "Creating temporary 32G swapfile..."
 fallocate -l 32G /mnt/swapfile
