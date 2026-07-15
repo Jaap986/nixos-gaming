@@ -1,5 +1,5 @@
 {
-  description = "Jaap986's NixOS flake for gaming, HTPC, laptop, NAS, and installer hosts";
+  description = "Jaap986's NixOS flake for gaming and installer hosts";
 
   # ============================================================================
   # Inputs Configuration
